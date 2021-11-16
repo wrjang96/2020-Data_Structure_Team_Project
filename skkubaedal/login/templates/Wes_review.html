@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배달의 스꾸</title>
+    <style>
+      .pinkbox {
+        background-color: pink;
+        height: 500px;
+        margin: 0;
+        padding: 0;
+      }
+      .whitebox {
+        background-color: white;
+        text-align: center;
+        font-size: xx-large;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      img {
+        margin: 0;
+        padding: 0;
+      }
+      .timg {
+        vertical-align: top;
+      }
+      .bimg {
+        text-align: center;
+        vertical-align: bottom;
+      }
+      .Q {
+        background-color: gold;
+        text-align: center;
+        vertical-align: bottom;
+        border: 15px;
+        font-size:x-large;
+      }
+      span{
+        text-align: center;
+        vertical-align:text-bottom;
+      }
+      button {
+        background-color: gold;
+        border-color: gold;
+        color: hotpink;
+        font-size: 25px;
+        margin-top: 10px;
+        width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pinkbox">
+      <img
+        class="timg"
+        src="https://i.ibb.co/6Xp2y0n/image.png"
+        width="500px"
+        height="200px"
+      />
+      <img class="bimg" src="https://i.ibb.co/bsWfWVx/9.png" width="500px" height="500px"></a>
+    </div>
+    <div class="whitebox">
+      <span class="Q">N. 양식, 별점순 추천을 선택하셨습니다.</span><br>
+      <span class="Q">N. 별점이 높은 순서대로 양식 음식점 정보를 출력합니다.</span><br>
+      {% for list in lists %}
+                  <span>                  
+                    <h1>{{ list.name }}</h1>
+                    <p>{{ list.phone_number|linebreaksbr }}</p>
+                    <p>{{ list.foodlist|linebreaksbr }}</p>
+                    [리뷰 게시판]
+                    <p>{{ list.review|linebreaksbr }}</p>
+                    <p>별점 : {{ list.score|linebreaksbr }}</p>
+                  </span> 
+                    {% endfor %}
+        <button type="button" onclick="location.href='back'">
+          첫 화면으로 가기</button
+        >
+    </div>
+  </body>
+</html>

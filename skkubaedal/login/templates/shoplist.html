@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배달의 스꾸</title>
+    <style>
+      .pinkbox {
+        background-color: pink;
+        height: 500px;
+        margin: 0;
+        padding: 0;
+      }
+      .whitebox {
+        background-color: white;
+        text-align: center;
+        font-size: xx-large;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      img {
+        margin: 0;
+        padding: 0;
+      }
+      .timg {
+        vertical-align: top;
+      }
+      .bimg {
+        text-align: center;
+        vertical-align: bottom;
+      }
+      .Q {
+        background-color: gold;
+        text-align: center;
+        vertical-align: bottom;
+        border: 15px;
+        font-size: x-large;
+        padding:5px;
+      }
+      span {
+        text-align: center;
+        vertical-align: text-bottom;
+      }
+      button {
+        background-color: gold;
+        border-color: gold;
+        color: hotpink;
+        font-size: 25px;
+        margin-top: 10px;
+        width: 500px;
+      }
+      .food {
+        background-color:greenyellow;
+        border-color:greenyellow;
+        width:250px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pinkbox">
+        <img
+          class="timg"
+          src="https://i.ibb.co/6Xp2y0n/image.png"
+          width="500px"
+          height="200px"
+        />
+        <img class="bimg" src="https://i.ibb.co/bsWfWVx/9.png" width="500px" height="500px"></a>
+      </div>
+      <div class="whitebox">
+        <span class="Q">N. 학교 주변 맛집 리스트입니다.</span><br>
+        {% for list in lists %}
+        <button class ="food" type="button" onclick="location.href='{% url 'shopdetail' pk=list.pk %}'">
+          {{ list.name }}</button
+        >
+        {% endfor %}
+      </div>
+  </body>
+</html>

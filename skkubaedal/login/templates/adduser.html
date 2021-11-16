@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>배달의 스꾸</title>
+    <style>
+      .pinkbox {
+        background-color: pink;
+        height: 500px;
+      }
+      .whitebox {
+        background-color: white;
+        text-align: center;
+        font-size: xx-large;
+      }
+      form {
+        font-size: medium;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pinkbox">
+      <img
+        src="https://i.ibb.co/6Xp2y0n/image.png"
+        width="500px"
+        height="200px"
+      />
+      <form method="post" action="">
+        {% csrf_token %} {{ form.as_p }}
+        <input type="submit" value="회원가입" />
+      </form>
+    </div>
+    <div class="whitebox"></div>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<head>
+  <style>
+    .pinkbox {
+      background-color: pink;
+      height: 500px;
+    }
+    .whitebox {
+      background-color: white;
+      text-align: center;
+      font-size: xx-large;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    form {
+      font-size: medium;
+    }
+  </style>
+</head>
+<div class="pinkbox">
+  <img src="https://i.ibb.co/6Xp2y0n/image.png" width="500px" height="200px" />
+  <form method="post" action="">
+    {% csrf_token %} {{ form.as_p }}
+    <input type="submit" value="로그인" />
+  </form>
+</div>
+<div class="whitebox"></div>
